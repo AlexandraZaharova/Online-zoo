@@ -331,13 +331,13 @@ li.active a:hover {
   background-position: center;
 }
 .eagle-img {
-  background-image: url("assets/images/eaglescirk.jpg");
+  background-image: url("assets/images/eagles.jpg");
 }
 .gorilla-img {
-  background-image: url("assets/images/gorillacirk.jpg");
+  background-image: url("assets/images/gorilla.jpg");
 }
 .crocodile-img {
-  background-image: url("assets/images/crocodilecirk.jpg");
+  background-image: url("assets/images/crocodile.jpg");
 }
 .fox-img {
   background-image: url("assets/images/fox.png");
@@ -350,22 +350,22 @@ li.active a:hover {
   bottom: 14px;
   width: 245px;
   height: 352px;
-  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/pandacirkl.jpg);
+  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/panda.jpg);
   border-radius: 5px;
   background-size: cover;
   background-position: center;
 }
 .eagle-img:hover {
-  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/eaglescirk.jpg);
+  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/eagles.jpg);
 }
 /*.panda-img: hover {*/
 /*  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/pandacirkl.jpg);*/
 /*}*/
 .gorilla-img:hover {
-  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/gorillacirk.jpg);
+  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/gorilla.jpg);
 }
 .crocodile-img:hover {
-  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/crocodilecirk.jpg);
+  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/crocodile.jpg);
 }
 .gallery-slider__img:hover{
   transition: 0.9s;
@@ -1481,16 +1481,16 @@ li.active a:hover {
   z-index: 2;
 }
 .placeholder-crocodile__img {
-  background-image: url("assets/images/crocodilecirk.jpg");
+  background-image: url("assets/images/crocodile.jpg");
 }
 .placeholder-panda__img {
-  background-image: url("assets/images/pandacirkl.jpg");
+  background-image: url("assets/images/panda.jpg");
 }
 .placeholder-eagle__img {
-  background-image: url("assets/images/eaglescirk.jpg");
+  background-image: url("assets/images/eagles.jpg");
 }
 .placeholder-gorilla__img {
-  background-image: url("assets/images/gorillacirk.jpg");
+  background-image: url("assets/images/gorilla.jpg");
 }
 .placeholder-panda {
   position: absolute;
@@ -1573,16 +1573,16 @@ h5 {
   color: #333333;
 }
 .tooltip-crocodile .tooltip-img {
-  background-image: url("assets/images/crocodilecirk.jpg");
+  background-image: url("assets/images/crocodile.jpg");
 }
 .tooltip-panda .tooltip-img {
-  background-image: url("assets/images/pandacirkl.jpg");
+  background-image: url("assets/images/panda.jpg");
 }
 .tooltip-eagle .tooltip-img {
-  background-image: url("assets/images/eaglescirk.jpg");
+  background-image: url("assets/images/eagles.jpg");
 }
 .tooltip-gorilla .tooltip-img {
-  background-image: url("assets/images/gorillacirk.jpg");
+  background-image: url("assets/images/gorilla.jpg");
 }
 .placeholder:hover > .tooltip {
   display: flex;
