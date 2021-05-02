@@ -778,7 +778,7 @@ li.active a:hover {
   background: #f2f2f2;
 }
 .container {
-  width: 62.5%;
+  width: 62.5vw;
   margin: 100px auto;
 }
 @media (max-width: 1200px) {
@@ -872,31 +872,16 @@ li.active a:hover {
   overflow: hidden;
 }
 .fourth_screen-slider {
+  width: auto;
   display: flex;
   justify-content: flex-start;
-}
-.fourth_screen-slider > .arrowLeft-box,
-.fourth_screen-slider > .arrowRight-box {
-  position: absolute;
-  top: 184px;
-}
-.arrowLeft-box {
-  left: -50px;
-}
-.arrowRight-box {
-  right: -50px;
-}
-.arrowLeft:hover,
-.arrowRight:hover {
-  cursor: pointer;
-}
-.arrowLeft:hover > path,
-.arrowRight:hover > path {
-  fill: #333333;
+  column-gap: 30px;
 }
 .fourth_screen-slider__img{
-  width: 23.17%;
+  /*display: block;*/
+  flex-shrink: 0;
   height: 399px;
+  width: 23.17%;
   border-radius: 5px;
   background-size: cover;
   background-position: center;
@@ -913,7 +898,20 @@ li.active a:hover {
 .panda-slide {
   background-image: url("assets/images/panda.jpg");
 }
+.tiger-slide {
+  background-image: url("assets/images/tiger.jpg");
+}
+.lion-slide {
+  background-image: url("assets/images/lion.jpg");
+}
+.fox-slide {
+  background-image: url("assets/images/fox.png");
+}
+.elephant-slide {
+  background-image: url("assets/images/elephant.jpg");
+}
 .fourth_screen-slider__text {
+  display: none;
   width: 92.38%;
   margin: 269px auto 44px;
 }
@@ -923,6 +921,35 @@ li.active a:hover {
 .fourth-screen__range {
   margin-top: 5px;
 }
+.active {
+  display: flex;
+}
+.fourth_screen-gallery-arrow-left,
+.fourth_screen-gallery-arrow-right {
+  display: block;
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.6;
+  z-index: 32;
+}
+.fourth_screen-gallery-arrow-left {
+  left: -40px;
+  top: 40%;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
+}
+
+.fourth_screen-gallery-arrow-right {
+  right: -40px;
+  top: 40%;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
+}
+.fourth_screen-gallery-arrow-left:hover,
+.fourth_screen-gallery-arrow-right:hover {
+  opacity: 1.0;
+}
+
 @media (max-width: 1200px) {
 
   .fourth_screen {
