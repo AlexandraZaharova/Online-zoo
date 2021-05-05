@@ -1,3 +1,17 @@
+:root {
+    --header-background: #ffffff;
+    --dark-text: #333333;
+    --background-one: #fbfbfb;
+    --dark-text2: #4f4f4f;
+    --bg: #fefefe;
+}
+.dark {
+    --header-background: #333333;
+    --dark-text: #fefefe;
+    --background-one: #4f4f4f;
+    --dark-text2: #f2f2f2;
+    --bg: #3c3c3c;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -22,6 +36,7 @@ a {
     height: 94px;
     padding-top: 26px;
     box-sizing: border-box;
+    background: var(--header-background);
     box-shadow: 0 4px 8px rgba(44, 101, 77, 0.08);
 }
 .wrapper {
@@ -56,14 +71,17 @@ h3 {
     font-weight: 900;
     font-size: 48px;
     line-height: 56px;
-    color: #333333;
+    color: var(--dark-text);
 }
 h4 {
     font-weight: 900;
     font-size: 20px;
     line-height: 23px;
-    color: #333333;
+    color: var(--dark-text);
     margin: 0;
+}
+.logo-svg path {
+    fill: var(--dark-text);
 }
 .main-nav {
     width: 573px;
@@ -79,14 +97,14 @@ h4 {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #333333;
+    color: var(--dark-text);
 }
 .main-nav-list li.active {
     font-weight: 900;
     text-decoration: underline;
 }
 .main-nav-list li a {
-    color: #333333;
+    color: var(--dark-text);
 }
 .main-nav-list li a:hover {
     font-weight: 900;
@@ -105,7 +123,7 @@ h4 {
     height: 30px;
     margin: 0;
     background: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    border: 1px solid var(--header-background);
     border-radius: 30px;
     outline: none;
     cursor: pointer;
@@ -164,7 +182,6 @@ h4 {
         position: fixed;
         top: 0;
         height: 94px;
-        background: #FFFFFF;
         box-shadow: 0 4px 8px rgba(44, 101, 77, 0.08);
         z-index: 10;
     }
@@ -218,6 +235,7 @@ h4 {
 .main {
     display: flex;
     height: 1288px;
+    background: var(--background-one);
 }
 .container {
     max-width: 1200px;
@@ -243,7 +261,7 @@ h4 {
     font-size: 48px;
     line-height: 56px;
     text-align: center;
-    color: #333333;
+    color: var(--dark-text);
     margin: 0;
 }
 .container__text {
@@ -252,7 +270,7 @@ h4 {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
-    color: #4f4f4f;
+    color: var(--dark-text2);
 }
 .map-gallery {
     position: relative;
@@ -303,7 +321,7 @@ h4 {
 /*}*/
 .arrowLeft:hover > path,
 .arrowRight:hover > path {
-    fill: #333333;
+    fill: var(--dark-text);
 }
 .gorilla {
     background-image: url("../../assets/images/gorilla.jpg");
@@ -327,7 +345,7 @@ div.circle-active {
     width: 95.5%;
     height: 95.5%;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: var(--header-background);
     z-index: 2;
 }
 .crocodile {
@@ -366,7 +384,7 @@ div.circle-active {
 .range::-webkit-slider-thumb {
     height: 10px;
     width: 30px;
-    background-color: #333333;
+    background-color: var(--dark-text);
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -3px;
@@ -380,7 +398,7 @@ div.circle-active {
 .range::-moz-range-thumb {
     height: 10px;
     width: 30px;
-    background-color: #333333;
+    background-color: var(--dark-text);
     cursor: pointer;
 }
 .range-box {

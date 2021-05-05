@@ -1,3 +1,19 @@
+:root {
+  --header-background: #ffffff;
+  --dark-text: #333333;
+  --background-one: #fbfbfb;
+  --background-two: #f2f2f2;
+  --dark-text2: #4f4f4f;
+  --bg: #fefefe;
+}
+.dark {
+  --header-background: #333333;
+  --dark-text: #fefefe;
+  --background-one: #333333;
+  --background-two: #4f4f4f;
+  --dark-text2: #f2f2f2;
+  --bg: #3c3c3c;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -63,13 +79,13 @@ a {
 .second-screen__range::-webkit-slider-thumb
 {
   width:62px;
-  background: #333333;
+  background: var(--dark-text);
 }
 
 .fourth-screen__range::-webkit-slider-thumb,
 .sixth-screen__range::-webkit-slider-thumb {
   width:30px;
-  background: #333333;
+  background: var(--dark-text);
 }
 
 .header {
@@ -77,6 +93,7 @@ a {
   height: 94px;
   padding-top: 26px;
   box-sizing: border-box;
+  background: var(--header-background);
 }
 .wrapper {
   width: 84.375%;
@@ -111,14 +128,17 @@ h3 {
   font-weight: 900;
   font-size: 48px;
   line-height: 56px;
-  color: #333333;
+  color: var(--dark-text);
 }
 h4 {
   font-weight: 900;
   font-size: 20px;
   line-height: 23px;
-  color: #333333;
+  color: var(--dark-text);
   margin: 0;
+}
+.logo-svg path {
+  fill: var(--dark-text);
 }
 .main-nav {
   width: 573px;
@@ -134,14 +154,14 @@ h4 {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #333333;
+  color: var(--dark-text);
 }
 .main-nav-list li.active {
   font-weight: 900;
   text-decoration: underline;
 }
 .main-nav-list li a {
-  color: #333333;
+  color: var(--dark-text);
 }
 .main-nav-list li a:hover {
   cursor: pointer;
@@ -160,8 +180,8 @@ li.active a:hover {
   width: 54px;
   height: 30px;
   margin: 0;
-  background: #f2f2f2;
-  border: 1px solid #f2f2f2;
+  background: var(--background-two);
+  border: 1px solid var(--background-two);
   border-radius: 30px;
   outline: none;
   cursor: pointer;
@@ -178,7 +198,7 @@ li.active a:hover {
   top: 1.5px;
   width: 25px;
   height: 25px;
-  background-color: #ffffff;
+  background-color: var(--header-background);
   border-radius: 50%;
   transform: translateX(0);
   transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
@@ -219,7 +239,6 @@ li.active a:hover {
     position: fixed;
     top: 0;
     height: 94px;
-    background: #FFFFFF;
     box-shadow: 0 4px 8px rgba(44, 101, 77, 0.08);
     z-index: 10;
   }
@@ -661,7 +680,7 @@ li.active a:hover {
   width: 100%;
   height: 883px;
   margin: 0 auto;
-  background: #fbfbfb;
+  background: var(--background-one);
 }
 .second-screen-box {
   width: 790px;
@@ -679,7 +698,7 @@ li.active a:hover {
 .second_screen-text{
   font-weight: 400;
   line-height: 16.41px;
-  color: #4f4f4f;
+  color: var(--dark-text2);
 }
 .second_screen-img {
   width: 100%;
@@ -694,7 +713,7 @@ li.active a:hover {
 .second-screen__range-label,
 .fourth_screen__range-label {
   margin-bottom: 11px;
-  color: #333333;
+  color: var(--dark-text);
 }
 .second_screen-btn {
   margin-top: 30px;
@@ -775,7 +794,7 @@ li.active a:hover {
   display: flex;
   height: 413px;
   width: 100%;
-  background: #f2f2f2;
+  background: var(--background-two);
 }
 .container {
   width: 62.5vw;
@@ -810,7 +829,7 @@ li.active a:hover {
 .third_screen-text{
   font-weight: normal;
   line-height: 16px;
-  color: #4f4f4f;
+  color: var(--dark-text2);
 }
 .believe__img {
   height: 80px;
@@ -852,7 +871,7 @@ li.active a:hover {
   display: flex;
   height: 854px;
   width: 100%;
-  background: #fbfbfb;
+  background: var(--background-one);
 }
 .fourth_screen-container {
   height: 654px;
@@ -1059,7 +1078,7 @@ li.active a:hover {
   display: flex;
   height: 754px;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--background-two);
 }
 .fifth-screen__container {
   height: 554px;
@@ -1302,7 +1321,7 @@ li.active a:hover {
 .sixth-screen {
   display: flex;
   height: 810px;
-  background: #fbfbfb;
+  background: var(--background-one);
 }
 .sixth-screen__container {
   margin-top: 100px;
@@ -1342,7 +1361,7 @@ li.active a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fefefe;
+  background: var(--bg);
   box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
   border-radius: 5px;
 }
@@ -1466,7 +1485,7 @@ li.active a:hover {
 .seventh-screen {
   display: flex;
   height: 904px;
-  background: #f2f2f2;
+  background: var(--background-two);
 }
 .seventh-screen__container {
   display: flex;
@@ -1521,7 +1540,7 @@ li.active a:hover {
 }
 .placeholder-panda {
   position: absolute;
-  top: calc(37% - var(--mark-height));
+  top: calc(37% - var--mark-height));
   left: calc(77.2% - var(--mark-width) / 2);
 }
 .placeholder-crocodile {
@@ -1545,7 +1564,7 @@ li.active a:hover {
   height: 149px;
   display: none;
   align-items: center;
-  background: #FEFEFE;
+  background: var(--bg);
   box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
   border-radius: 8px;
   z-index: 3;
@@ -1584,20 +1603,20 @@ h5 {
   font-weight: 900;
   font-size: 18px;
   line-height: 21px;
-  color: #333333;
+  color: var(--dark-text);
   margin-top: 0;
   margin-bottom: 7px;
 }
 .tooltip-text p {
   font-size: 14px;
   line-height: 16px;
-  color: #4f4f4f;
+  color: var(--dark-text2);
 }
 .tooltip-text p span {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  color: #333333;
+  color: var(--dark-text);
 }
 .tooltip-crocodile .tooltip-img {
   background-image: url("assets/images/crocodile.jpg");
