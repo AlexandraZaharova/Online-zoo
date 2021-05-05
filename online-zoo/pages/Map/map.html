@@ -39,30 +39,27 @@
         <h2 class="container__title">Choose your favorite</h2>
         <p class="container__text">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects, including providing veterinary support and raising much-needed emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
         <div class="map-gallery">
-          <div class="map-gallery__slider">
-            <svg class="arrowLeft" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.6663 16.1706L20.0167 29.5207C20.3255 29.8298 20.7376 30 21.1772 30C21.6167 30 22.0289 29.8298 22.3376 29.5207L23.3208 28.5378C23.9605 27.8973 23.9605 26.8564 23.3208 26.2169L12.1102 15.0062L23.3332 3.78314C23.642 3.47412 23.8125 3.06217 23.8125 2.6229C23.8125 2.18315 23.642 1.7712 23.3332 1.46194L22.3501 0.479263C22.0411 0.17024 21.6291 0 21.1896 0C20.7501 0 20.3379 0.17024 20.0291 0.479263L6.6663 13.8416C6.35679 14.1516 6.18679 14.5655 6.18777 15.0055C6.18679 15.4472 6.35679 15.8608 6.6663 16.1706Z" fill="#828282"/>
-            </svg>
+          <div class="map-gallery__slider" id="carousel">
             <div class="map-gallery__wrapper">
-              <div class="map-gallery__img">
-                <div class="gorilla img"></div>
-                <div class="circle-active">
-                  <div class="circle-white">
-                      <div class="panda img"></div>
-                  </div>
-                </div>
-                <div class="crocodile img"></div>
-                <div class="eagles img"></div>
-                <div class="tiger img"></div>
-                <div class="elephant img"></div>
-                <div class="lion img"></div>
-                <div class="zebra img"></div>
+              <div class="gorilla img"></div>
+              <div class="panda img active-img"></div>
+              <div class="circle-active">
+                <div class="circle-white"></div>
               </div>
+              <div class="crocodile img"></div>
+              <div class="eagles img"></div>
+              <div class="tiger img"></div>
+              <div class="elephant img"></div>
+              <div class="lion img"></div>
+              <div class="zebra img"></div>
             </div>
-            <svg class="arrowRight" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="#828282"/>
-            </svg>
           </div>
+          <svg class="arrowLeft" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.6663 16.1706L20.0167 29.5207C20.3255 29.8298 20.7376 30 21.1772 30C21.6167 30 22.0289 29.8298 22.3376 29.5207L23.3208 28.5378C23.9605 27.8973 23.9605 26.8564 23.3208 26.2169L12.1102 15.0062L23.3332 3.78314C23.642 3.47412 23.8125 3.06217 23.8125 2.6229C23.8125 2.18315 23.642 1.7712 23.3332 1.46194L22.3501 0.479263C22.0411 0.17024 21.6291 0 21.1896 0C20.7501 0 20.3379 0.17024 20.0291 0.479263L6.6663 13.8416C6.35679 14.1516 6.18679 14.5655 6.18777 15.0055C6.18679 15.4472 6.35679 15.8608 6.6663 16.1706Z" fill="#828282"/>
+          </svg>
+          <svg class="arrowRight" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="#828282"/>
+          </svg>
           <div class="range-box first-screen__range-box">
             <label for="range" class="range-label first-screen__range-label"><span>02/</span>08</label>
             <input type="range" class="range first-screen__range" id="range" min="1" max="8" step="1" value="2">
@@ -247,7 +244,7 @@
             <path d="M713.39 241.098L712.863 239.571L711.75 238.496L711.419 237.075L709.538 235.804L707.522 232.824L706.378 229.92L703.82 227.469L702.226 226.879L699.713 223.491L699.186 221.01L699.216 218.907L696.974 214.959L695.259 213.567L693.318 212.826L692.054 210.784L692.189 209.982L691.121 208.137L690.053 207.335L688.518 204.688L686.231 201.814L684.29 199.363L682.56 199.378L682.981 197.427L683.056 196.186L683.387 194.765L687.284 195.324L688.714 194.235L689.451 192.949L692.054 192.45L692.535 191.255L693.634 190.65L689.917 187.095L696.673 185.295L697.29 184.766L701.518 185.734L706.875 188.23L717.242 195.4L723.712 195.672L726.827 196.02L727.85 197.714L730.287 197.624L731.928 200.694L733.703 201.511L734.41 202.767L736.923 204.264L737.254 205.732L737.013 206.927L737.54 208.122L738.638 209.12L739.195 210.285L739.782 211.162L740.895 211.858L741.843 211.616L742.626 212.977L742.821 213.794L744.446 217.41L755.114 219.195L755.761 218.438L757.567 220.964L755.761 228.089L745.424 231.644L735.343 233.021L732.153 234.609L729.821 238.36L728.196 238.95L727.263 237.755L725.909 237.937L722.493 237.589L721.816 237.226L717.754 237.317L716.806 237.634L715.316 236.712L714.473 238.451L714.895 239.949L713.39 241.098Z" fill="#333333"/>
             <path d="M1137.9 336.564L1138.77 337.79L1136.29 337.759L1135.16 335.566L1137.21 336.428L1137.9 336.564ZM1133.63 334.386L1132.23 334.477L1130.09 334.114L1129.4 333.554L1129.75 332.147L1132.05 332.707L1133.13 333.448L1133.63 334.386ZM1136.65 333.418L1136.07 334.083L1133.72 330.998L1133.16 328.865H1134.37L1135.4 331.709L1136.65 333.418ZM1130.65 328.925L1130.74 329.636L1128.08 328.139L1126.22 326.853L1124.98 325.673L1125.53 325.31L1127.11 326.157L1129.9 327.791L1130.65 328.925ZM1122.6 325.401L1121.88 325.612L1120.39 324.796L1119.02 323.328L1119.24 322.738L1121.26 324.251L1122.6 325.401Z" fill="#333333"/>
           </svg>
-          <div class="placeholder-crocodile" title="crocodile">
+          <div class="placeholder placeholder-crocodile" title="crocodile" data-text="../Zoos/alligator/alligator.html">
             <svg class="placeholder-crocodile__svg" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M33.6825 0C15.4494 0 0.616211 14.835 0.616211 33.0703C0.616211 50.7103 30.8466 90.9006 32.1343 92.6047C32.4961 93.0911 33.0758 93.375 33.6827 93.375C34.2895 93.375 34.8692 93.0911 35.231 92.6047C36.5186 90.9006 66.7491 50.7105 66.7491 33.0703C66.7488 14.835 51.9156 0 33.6825 0ZM33.6825 50.5781C24.031 50.5781 16.1768 42.7229 16.1768 33.0703C16.1768 23.4176 24.031 15.5624 33.6825 15.5624C43.334 15.5624 51.1882 23.4176 51.1882 33.0703C51.1882 42.7229 43.334 50.5781 33.6825 50.5781Z" fill="url(#paint0_linear)"/>
               <defs>
@@ -259,8 +256,8 @@
             </svg>
             <div class="placeholder-crocodile__img"></div>
           </div>
-          <div class="placeholder-panda" title="panda">
-            <svg class="placeholder-panda__svg active" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="placeholder placeholder-panda" title="panda" data-text="../Zoos/panda/panda.html">
+            <svg class="placeholder-panda__svg active-mark" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M33.6825 0C15.4494 0 0.616211 14.835 0.616211 33.0703C0.616211 50.7103 30.8466 90.9006 32.1343 92.6047C32.4961 93.0911 33.0758 93.375 33.6827 93.375C34.2895 93.375 34.8692 93.0911 35.231 92.6047C36.5186 90.9006 66.7491 50.7105 66.7491 33.0703C66.7488 14.835 51.9156 0 33.6825 0ZM33.6825 50.5781C24.031 50.5781 16.1768 42.7229 16.1768 33.0703C16.1768 23.4176 24.031 15.5624 33.6825 15.5624C43.334 15.5624 51.1882 23.4176 51.1882 33.0703C51.1882 42.7229 43.334 50.5781 33.6825 50.5781Z" fill="url(#paint0_linear)"/>
               <defs>
                 <linearGradient id="paint0_linear" x1="-11.732" y1="-4.90899e-07" x2="83.0275" y2="20.3729" gradientUnits="userSpaceOnUse">
@@ -271,8 +268,8 @@
             </svg>
             <div class="placeholder-panda__img"></div>
           </div>
-          <div class="placeholder-eagle" title="eagle">
-            <svg class="placeholder-eagle__svg" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="placeholder placeholder-eagles" title="eagles" data-text="../Zoos/eagle/eagle.html">
+            <svg class="placeholder-eagles__svg" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M33.6825 0C15.4494 0 0.616211 14.835 0.616211 33.0703C0.616211 50.7103 30.8466 90.9006 32.1343 92.6047C32.4961 93.0911 33.0758 93.375 33.6827 93.375C34.2895 93.375 34.8692 93.0911 35.231 92.6047C36.5186 90.9006 66.7491 50.7105 66.7491 33.0703C66.7488 14.835 51.9156 0 33.6825 0ZM33.6825 50.5781C24.031 50.5781 16.1768 42.7229 16.1768 33.0703C16.1768 23.4176 24.031 15.5624 33.6825 15.5624C43.334 15.5624 51.1882 23.4176 51.1882 33.0703C51.1882 42.7229 43.334 50.5781 33.6825 50.5781Z" fill="url(#paint0_linear)"/>
               <defs>
                 <linearGradient id="paint0_linear" x1="-11.732" y1="-4.90899e-07" x2="83.0275" y2="20.3729" gradientUnits="userSpaceOnUse">
@@ -281,9 +278,9 @@
                 </linearGradient>
               </defs>
             </svg>
-            <div class="placeholder-eagle__img"></div>
+            <div class="placeholder-eagles__img"></div>
           </div>
-          <div class="placeholder-gorilla" title="gorilla">
+          <div class="placeholder placeholder-gorilla" title="gorilla" data-text="../Zoos/gorilla/gorilla.html">
             <svg class="placeholder-gorilla__svg" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M33.6825 0C15.4494 0 0.616211 14.835 0.616211 33.0703C0.616211 50.7103 30.8466 90.9006 32.1343 92.6047C32.4961 93.0911 33.0758 93.375 33.6827 93.375C34.2895 93.375 34.8692 93.0911 35.231 92.6047C36.5186 90.9006 66.7491 50.7105 66.7491 33.0703C66.7488 14.835 51.9156 0 33.6825 0ZM33.6825 50.5781C24.031 50.5781 16.1768 42.7229 16.1768 33.0703C16.1768 23.4176 24.031 15.5624 33.6825 15.5624C43.334 15.5624 51.1882 23.4176 51.1882 33.0703C51.1882 42.7229 43.334 50.5781 33.6825 50.5781Z" fill="url(#paint0_linear)"/>
               <defs>
@@ -296,7 +293,7 @@
             <div class="placeholder-gorilla__img"></div>
           </div>
         </div>
-        <a class="btn-link" href="../Zoos/panda/panda.html">
+        <a class="btn-link">
           <button class="btn btn-watch"><img src="../../assets/icons/play.svg" class="btn-watch__img" alt="play">watch online</button>
         </a>
       </div>
