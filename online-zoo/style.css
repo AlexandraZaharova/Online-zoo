@@ -1540,7 +1540,7 @@ li.active a:hover {
 }
 .placeholder-panda {
   position: absolute;
-  top: calc(37% - var--mark-height));
+  top: calc(37% - var(--mark-height));
   left: calc(77.2% - var(--mark-width) / 2);
 }
 .placeholder-crocodile {
