@@ -5,6 +5,10 @@
   --background-two: #f2f2f2;
   --dark-text2: #4f4f4f;
   --bg: #fefefe;
+  --bg-map: #333333;
+  --bg-map-active: #dadada;
+  --arrow-hov: #333333;
+  --shema-text: #4f4f4f;
 }
 .dark {
   --header-background: #333333;
@@ -13,6 +17,10 @@
   --background-two: #4f4f4f;
   --dark-text2: #f2f2f2;
   --bg: #3c3c3c;
+  --bg-map: #e1e1e1;
+  --bg-map-active: #333333;
+  --arrow-hov: #fefefe;
+  --shema-text: #fefefe;
 }
 html {
   scroll-behavior: smooth;
@@ -948,23 +956,20 @@ li.active a:hover {
   height: 40px;
   position: absolute;
   cursor: pointer;
-  opacity: 0.6;
   z-index: 32;
 }
 .fourth_screen-gallery-arrow-left {
   left: -40px;
   top: 40%;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
 }
 
 .fourth_screen-gallery-arrow-right {
   right: -40px;
   top: 40%;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
 }
-.fourth_screen-gallery-arrow-left:hover,
-.fourth_screen-gallery-arrow-right:hover {
-  opacity: 1.0;
+.fourth_screen-gallery-arrow-left:hover > svg > path,
+.fourth_screen-gallery-arrow-right:hover > svg > path {
+  fill: var(--arrow-hov);
 }
 
 @media (max-width: 1200px) {
@@ -1088,6 +1093,9 @@ li.active a:hover {
 .fifth-screen__title {
   margin-bottom: 30px;
 }
+.fifth-screen__text {
+  color: var(--dark-text2);
+}
 .schema {
   display: flex;
   align-items: center;
@@ -1096,6 +1104,9 @@ li.active a:hover {
   width: 100%;
   margin-top: 92px;
   margin-bottom: 60px;
+}
+.shema-text {
+  fill: var(--shema-text);
 }
 .schema-img {
   width: 20.417%;
@@ -1348,10 +1359,21 @@ li.active a:hover {
   align-items: center;
   margin-bottom: 52px;
 }
-.reviews > .arrowLeft-box,
-.reviews > .arrowRight-box {
+.arrowLeft-box,
+.arrowRight-box {
   position: absolute;
-  top: 140px;
+  top: 141px;
+  cursor: pointer;
+}
+.arrowLeft-box {
+  left: -51px;
+}
+.arrowRight-box {
+  right: -51px;
+}
+.arrowLeft-box:hover > svg > path,
+.arrowRight-box:hover > svg > path {
+  fill: var(--arrow-hov);
 }
 .review {
   width: 48.75%;
@@ -1500,9 +1522,11 @@ li.active a:hover {
   --mark-width: 66px;
   --mark-height: 93px;
 }
-.map {
-  width: 100%;
-  height: 100%;
+.map-with-placeholder > svg > path {
+  fill: var(--bg-map);
+}
+.map-with-placeholder > svg > path.map-active {
+  fill: var(--bg-map-active);
 }
 .placeholder-crocodile:hover path,
 .placeholder-panda:hover path,
