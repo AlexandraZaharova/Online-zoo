@@ -1522,6 +1522,10 @@ li.active a:hover {
   --mark-width: 66px;
   --mark-height: 93px;
 }
+.map {
+  width: 100%;
+  height: 100%;
+}
 .map-with-placeholder > svg > path {
   fill: var(--bg-map);
 }
