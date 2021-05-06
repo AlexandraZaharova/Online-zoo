@@ -1,11 +1,16 @@
 const toggle = document.getElementById('toggle-button');
+if (!localStorage.theme) {
+  localStorage.theme = "light";
+}
+document.body.className = localStorage.theme;
+if (document.body.classList.contains('dark')) {
+  toggle.setAttribute('checked', true);
+}
+console.log(toggle.checked)
 
 function handleChange() {
-  if (document.documentElement.classList.contains('dark')) {
-    document.documentElement.classList.remove('dark')
-  } else {
-    document.documentElement.classList.add('dark')
-  }
+  document.body.classList.toggle('dark');
+  localStorage.theme = document.body.className || "light";
 }
 
 toggle.addEventListener('change', handleChange);
