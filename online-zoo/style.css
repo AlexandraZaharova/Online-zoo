@@ -337,23 +337,27 @@ li.active a:hover {
   height: 421px;
   position: absolute;
   left: 137px;
-  padding-top: 15px;
   box-sizing: border-box;
   z-index: 2;
+  overflow-x: hidden;
 }
 .gallery-slider {
+  position: relative;
+  top: 15px;
+  left: 0;
   display: flex;
   align-items: center;
+  column-gap: 46px;
+  transition: all ease 1s;
 }
 /*slider img*/
 .gallery-slider__img {
   width: 140px;
   height: 203px;
-  margin-right: 46px;
-  filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
   border-radius: 5px;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 .eagle-img {
   background-image: url("assets/images/eagles.jpg");
@@ -364,43 +368,31 @@ li.active a:hover {
 .crocodile-img {
   background-image: url("assets/images/crocodile.jpg");
 }
+.elephant-img {
+  background-image: url("assets/images/elephant.jpg");
+}
 .fox-img {
   background-image: url("assets/images/fox.png");
 }
-/*.panda-img {*/
-/*  background-image: url("assets/images/pandacirkl.jpg");*/
-/*}*/
+.lion-img {
+  background-image: url("assets/images/lion.jpg");
+}
+.tiger-img {
+  background-image: url("assets/images/tiger.jpg");
+}
 .panda-img {
+  background-image: url("assets/images/panda.jpg");
+}
+.gallery-slider__active {
   position: relative;
-  bottom: 14px;
+  top: -15px;
   width: 245px;
   height: 352px;
-  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/panda.jpg);
+  background-color:rgba(0,0,0,.3);
   border-radius: 5px;
-  background-size: cover;
-  background-position: center;
 }
-.eagle-img:hover {
-  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/eagles.jpg);
-}
-/*.panda-img: hover {*/
-/*  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/pandacirkl.jpg);*/
-/*}*/
-.gorilla-img:hover {
-  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/gorilla.jpg);
-}
-.crocodile-img:hover {
-  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%), url(assets/images/crocodile.jpg);
-}
-.gallery-slider__img:hover{
-  transition: 0.9s;
-  position: relative;
-  bottom: 14px;
-  width: 245px;
-  height: 352px;
-  border-radius: 5px;
-  background-size: cover;
-  background-position: center;
+.gallery-slider__active > .gallery-slider__text {
+  display: flex;
 }
 .gallery-slider__text,
 .fourth_screen-slider__text {
@@ -412,6 +404,13 @@ li.active a:hover {
 }
 .gallery-slider__text {
   margin: 232px auto 34px;
+}
+.gallery-slider__active::before {
+  content: '';
+  position: absolute;
+  width: 245px;
+  height: 352px;
+  background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 55%);
 }
 .textBtn {
   width: 97.38%;
@@ -467,14 +466,6 @@ li.active a:hover {
   line-height: 16px;
   color: #ffffff;
 }
-.panda-img__text {
-  display: flex;
-}
-.gallery-slider__img:hover > .gallery-slider__text,
-.fourth_screen-slider__img:hover > .fourth_screen-slider__text {
-  display: flex;
-}
-
 .range-box {
   display: flex;
   flex-direction: column;
@@ -483,7 +474,7 @@ li.active a:hover {
 .first-screen__range-box {
   position: absolute;
   left: 186px;
-  margin-top: 2px;
+  margin-top: 20px;
 }
 .range-label {
   font-weight: 900;
@@ -501,12 +492,14 @@ li.active a:hover {
   position: absolute;
   top: 182px;
   left: 2px;
+  width: 1817px;
   display: flex;
   align-items: center;
   z-index: 1;
 }
 .circle {
   position: relative;
+  bottom: 7px;
   width: 13px;
   height: 13px;
   border: 1px solid #fefefe;
@@ -524,7 +517,16 @@ li.active a:hover {
 }
 .gallery-line {
   border-top: 1px solid #fefefe;
-  width: 1211px;
+  width: 100%;
+  display: flex;
+  column-gap: 186px;
+}
+.img-circle {
+  left: 192px;
+}
+.img-circle:nth-of-type(2) {
+  margin-right: 33px;
+  margin-left: 33px;
 }
 
 @media (max-width: 1200px) {
@@ -906,7 +908,7 @@ li.active a:hover {
   /*display: block;*/
   flex-shrink: 0;
   height: 399px;
-  width: 23.17%;
+  width: 22.7%;
   border-radius: 5px;
   background-size: cover;
   background-position: center;
@@ -939,6 +941,9 @@ li.active a:hover {
   display: none;
   width: 92.38%;
   margin: 269px auto 44px;
+}
+.fourth_screen-slider__img:hover > .fourth_screen-slider__text {
+  display: flex;
 }
 .fourth-screen__range-box {
   margin-top: 26px;

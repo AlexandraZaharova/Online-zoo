@@ -73,8 +73,59 @@ popapCvc.addEventListener('input', () => {
   validate();
 })
 
+
+// slider Watch your favorite
+const slider = document.querySelector('.gallery-slider');
+let offsetLeft = 0;
+let slideActive = document.querySelector('.gallery-slider__active').dataset.number;
+const rangeFirst = document.querySelector('.first-screen__range');
+const rangeFirstLabel = document.querySelector('.first-screen__range-label').firstElementChild;
+let rangeValueNow = rangeFirst.value;
+
+const moveSlide = (e) => {
+  for (let child of slider.children) {
+    if (child.classList.contains('gallery-slider__active')) {
+      child.classList.remove('gallery-slider__active')
+    }
+  }
+  e.target.classList.add('gallery-slider__active');
+  if (slideActive > e.target.dataset.number) {
+    offsetLeft += 186 * (slideActive - e.target.dataset.number);
+  } else {
+    offsetLeft += -186 * (e.target.dataset.number - slideActive);
+  }
+  slider.style.left = `${offsetLeft}px`;
+  slideActive = e.target.dataset.number;
+  rangeFirst.value = +slideActive + 1;
+  rangeFirstLabel.innerText = `0${rangeFirst.value}/`;
+  rangeValueNow = rangeFirst.value;
+}
+rangeFirst.addEventListener('input', e => {
+  for (let child of slider.children) {
+    if (child.classList.contains('gallery-slider__active')) {
+      child.classList.remove('gallery-slider__active')
+    }
+  }
+  slider.children[rangeFirst.value - 1].classList.add('gallery-slider__active');
+  if (rangeValueNow < rangeFirst.value) {
+    offsetLeft += 186 * (slideActive - (rangeFirst.value - 1));
+  } else {
+    offsetLeft += 186 * (slideActive - (rangeFirst.value - 1));
+  }
+  slider.style.left = `${offsetLeft}px`;
+  slideActive = rangeFirst.value - 1;
+  rangeValueNow = rangeFirst.value;
+  rangeFirstLabel.innerText = `0${rangeFirst.value}/`;
+})
+
+slider.addEventListener('click', moveSlide);
+
+
 // slider Pets in Zoo
-const gap = 30;
+let gap = 30;
+if (document.documentElement.clientWidth <= 1200) {
+  gap = 20;
+}
 
 const carousel = document.getElementById('carousel');
 const next = document.querySelector('.fourth_screen-gallery-arrow-right');
