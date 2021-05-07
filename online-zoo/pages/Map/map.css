@@ -507,6 +507,9 @@ div.circle-active {
     .map-gallery__slider {
         height: 157px;
     }
+    .map-gallery__wrapper {
+        width: 1073px;
+    }
     .range-label {
         margin-bottom: 13px;
     }

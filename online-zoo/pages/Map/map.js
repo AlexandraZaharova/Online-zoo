@@ -43,9 +43,7 @@ function circleMovement() {
 }
 
 let allSlides = document.querySelectorAll('.img').length;
-console.log(allSlides)
 let remainingSlides = allSlides - Math.floor(width / (imgWidth + gap));
-console.log(remainingSlides)
 let visibleSlides = allSlides - remainingSlides;
 console.log(visibleSlides)
 
@@ -55,20 +53,16 @@ next.addEventListener('click', e => {
     if (slideIndex < visibleSlides) {
       slides[slideIndex-1].classList.remove('active-img');
       slides[slideIndex].classList.add('active-img');
-      // left = slides[slideIndex].offsetLeft + 1;
     } else {
-      // remainingSlides--;
-      // carousel.scrollTo((imgWidth + gap) * (slideIndex - (visibleSlides - 1)), 0);
-      // slides[slideIndex-1].classList.remove('active-img');
-      // slides[slideIndex].classList.add('active-img');
+      carousel.scrollTo((imgWidth + gap) * (slideIndex-4), 0);
+      slides[slideIndex-1].classList.remove('active-img');
+      slides[slideIndex].classList.add('active-img');
     }
   } else {
     slideIndex = 0;
     carousel.scrollTo(0, 0);
     slides[slides.length-1].classList.remove('active-img');
     slides[0].classList.add('active-img');
-    // remainingSlides = allSlides - Math.floor(width / imgWidth);
-    // left = slides[slideIndex].offsetLeft + 1;
   }
   range.value = slideIndex + 1;
   valueNow = slideIndex + 1;
@@ -86,18 +80,16 @@ prev.addEventListener('click', e => {
     slides[0].classList.remove('active-img');
     slides[slides.length-1].classList.add('active-img');
   } else {
-    slides[slideIndex+1].classList.remove('active-img');
-    slides[slideIndex].classList.add('active-img');
+    if (slides[slideIndex].offsetLeft > carousel.scrollLeft) {
+      slides[slideIndex+1].classList.remove('active-img');
+      slides[slideIndex].classList.add('active-img');
+    } else if (slides[slideIndex].offsetLeft <= carousel.scrollLeft) {
+      carousel.scrollTo((imgWidth + gap) * (slideIndex), 0);
+      slides[slideIndex+1].classList.remove('active-img');
+      slides[slideIndex].classList.add('active-img');
+    }
   }
 
-  // else if (slides[slideIndex].offsetLeft > carousel.scrollLeft) {
-  //   slides[slideIndex].classList.remove('active-img');
-  //   slides[slideIndex-1].classList.add('active-img');
-  // } else if (slides[slideIndex].offsetLeft === carousel.scrollLeft || slides[slideIndex].offsetLeft < carousel.scrollLeft) {
-  //   carousel.scrollTo((imgWidth + gap) * (slideIndex - 1), 0);
-  //   slides[slideIndex].classList.remove('active-img');
-  //   slides[slideIndex-1].classList.add('active-img');
-  // }
   range.value = slideIndex + 1;
   valueNow = slideIndex + 1;
   textLabel.innerText = `0${range.value}/`;
@@ -150,6 +142,7 @@ const handleActive = (e) => {
   textLabel.innerText = `0${range.value}/`;
   placeholderActive(name);
   slideIndex = i;
+  console.log(slideIndex)
   circleMovement();
 }
 
@@ -172,7 +165,6 @@ const  handlePlaceholderActive = (e) => {
   });
   elem.firstElementChild.classList.add('active-mark');
   link = elem.getAttribute("data-text");
-  console.log(link)
   active(name);
   addLink(link);
 }
@@ -190,7 +182,6 @@ const active = (name) => {
   valueNow = i + 1;
   textLabel.innerText = `0${range.value}/`;
   slideIndex = i;
-  console.log(slideIndex)
   circleMovement();
 }
 
