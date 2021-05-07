@@ -546,12 +546,15 @@ li.active a:hover {
     top: 432px;
     left: 36.47%;
     width: 80.15%;
+    height: 427px;
   }
   .first-screen-gallery__box {
     padding-top: 0;
+    height: 100%;
   }
   .gallery-slider {
     column-gap: 30px;
+    top: 0;
   }
   .first-screen__range-box {
     left: 215px;
@@ -560,23 +563,15 @@ li.active a:hover {
   .gallery-slider__img {
     width: 180px;
     height: 261px;
-    margin-right: 0;
   }
-  .panda-img {
+  .gallery-slider__active {
     width: 245px;
     height: 352px;
-    bottom: 0;
   }
-  .gallery-slider__img:hover{
-    transition: 0.9s;
-    position: relative;
-    bottom: 0;
-    width: 245px;
-    height: 352px;
-    border-radius: 5px;
-    background-size: cover;
-    background-position: center;
+  .gallery-slider__text {
+    margin: 249px auto 0;
   }
+
 }
 @media (max-width: 1100px) {
 

@@ -81,6 +81,14 @@ let slideActive = document.querySelector('.gallery-slider__active').dataset.numb
 const rangeFirst = document.querySelector('.first-screen__range');
 const rangeFirstLabel = document.querySelector('.first-screen__range-label').firstElementChild;
 let rangeValueNow = rangeFirst.value;
+let imgGap = 46;
+if (document.documentElement.clientWidth <= 1200) {
+  imgGap = 30;
+}
+let slideWidth = document.querySelector('.gallery-slider__img').offsetWidth;
+window.addEventListener('resize', (e) => {
+  slideWidth = document.querySelector('.gallery-slider__img').offsetWidth;
+});
 
 const moveSlide = (e) => {
   for (let child of slider.children) {
@@ -90,9 +98,9 @@ const moveSlide = (e) => {
   }
   e.target.classList.add('gallery-slider__active');
   if (slideActive > e.target.dataset.number) {
-    offsetLeft += 186 * (slideActive - e.target.dataset.number);
+    offsetLeft += (imgGap + slideWidth) * (slideActive - e.target.dataset.number);
   } else {
-    offsetLeft += -186 * (e.target.dataset.number - slideActive);
+    offsetLeft += -(imgGap + slideWidth) * (e.target.dataset.number - slideActive);
   }
   slider.style.left = `${offsetLeft}px`;
   slideActive = e.target.dataset.number;
@@ -110,7 +118,7 @@ rangeFirst.addEventListener('input', e => {
   if (rangeValueNow < rangeFirst.value) {
     offsetLeft += 186 * (slideActive - (rangeFirst.value - 1));
   } else {
-    offsetLeft += 186 * (slideActive - (rangeFirst.value - 1));
+    offsetLeft += (imgGap + slideWidth) * (slideActive - (rangeFirst.value - 1));
   }
   slider.style.left = `${offsetLeft}px`;
   slideActive = rangeFirst.value - 1;
